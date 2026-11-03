@@ -1,10 +1,10 @@
 // main.rs
-// Date: ... ... ... 2026
+// Date: Tue Nov 03 2026
 // Educational and Practice Rust Programming Language Code
 
-// Project: ...
+// Project: Learning enum in Rust programming language
 // Goal: ...
-// Dependency: ...
+// Dependency: Without any dependency
 
 // rustc 1.101.0-nightly (3e92e1a2d 2026-11-01)
 // binary: rustc
