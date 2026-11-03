@@ -30,5 +30,49 @@
 fn main() {
     println!("\n");
 
+    // The definition order specify the rank of each member.
+    match Daniel::Five.cmp(&Daniel::Two) {
+        std::cmp::Ordering::Greater => println!("Daniel::Five is GREATER than Daniel::Two"),
+        std::cmp::Ordering::Less => println!("Daniel::Five is LESS than Daniel::Two"),
+        std::cmp::Ordering::Equal => println!("Daniel::Five is EQUALS Daniel::Two"),
+    }
+
+    println!("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+    match Raphael::Five.cmp(&Raphael::Two) {
+        std::cmp::Ordering::Greater => println!("Raphael::Five is GREATER than Raphael::Two"),
+        std::cmp::Ordering::Less => println!("Raphael::Five is LESS than Raphael::Two"),
+        std::cmp::Ordering::Equal => println!("Raphael::Five is EQUALS Raphael::Two"),
+    }
+
     println!("\nThe End ...\n");
 }
+
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord)]
+enum Daniel {
+    One = 1,
+    Two = 2,
+    Three = 3,
+    Four = 4,
+    Five = 5,
+}
+
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord)]
+enum Raphael {
+    One = 5,
+    Two = 4,
+    Three = 3,
+    Four = 2,
+    Five = 1,
+}
+
+// encounter with compile time error
+// This is not possible two enum members have an identical value.
+
+// enum Samuel {
+// One = 5,
+// Two = 5,
+// Three = 4,
+// Four = 4,
+// Five = 1,
+// }
