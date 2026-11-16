@@ -1,2 +1,3 @@
-# rust_enum
-Learning Using enum in Rust Programming Language
+# Learning `enum` in Rust Programming Language.
+
+## You can see all my practice in snapshots folder
